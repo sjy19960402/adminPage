@@ -56,7 +56,7 @@ body {
   position: relative;
   margin-left: 40px;
   width: 45%;
-  background-image: url("/img/spc_20.png");
+  background-image: url("img/spc_20.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
