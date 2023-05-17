@@ -24,11 +24,11 @@
     />
     <!-- retty : css -->
     <link rel="stylesheet" href="style.css" />
-     <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
@@ -300,54 +300,12 @@
             <a href="#" class="btn_1">Add New</a>
           </div>
         </div>
-        <!-- 매출분석 : bootstrap bar chart -->
-        <div class="container">
-            <div class="row my-3">
-                <div class="col">
-                    <h4>Bootstrap 4 Chart.js - Bar Chart</h4>
-                </div>
-            </div>
-            <div class="row my-2">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <canvas id="chBar" height="100"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 매출분석 : bootstrap pie chart -->
-        <div class="container">
-            <div class="row my-3">
-                <div class="col">
-                    <h4>Bootstrap 4 Chart.js</h4>
-                </div>
-            </div>
-            <div class="row py-2">
-                <div class="col-md-4 py-1">
-                    <div class="card">
-                        <div class="card-body">
-                            <canvas id="chDonut1"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-1">
-                    <div class="card">
-                        <div class="card-body">
-                            <canvas id="chDonut2"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 py-1">
-                    <div class="card">
-                        <div class="card-body">
-                            <canvas id="chDonut3"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <!-- 매출분석 : chart 1-->
+        <div class="pie animate mt-5" style="--p:90;--c:lightgreen"> 90%</div>
+        <!-- 매출분석 : chart 2 -->
+        <div class="pie animate no-round ml-5" style="--p:80;--c:orange;"> 80%</div>
+
       </section>
       <!-- 메인3 리뷰관리-->
       <section id="tab3" class="cont03 cont">
@@ -456,9 +414,209 @@
         <div class="today-review">
             <h3>오늘의 리뷰 <span class="bold-text">32</span>개</h3>
             <p>9월 16일 금요일</p>
-            <ul>
-                <li></li>
-            </ul>
+            <div class="row">
+				<div class="col-sm-6 col-md-6 col-lg-4">
+					<div class="card bg-white p-3 mb-4 shadow">
+						<div class="d-flex justify-content-between mb-4">
+							<div class="user-info">
+								<div class="user-info__img">
+									<img src="img/user1.jpg" alt="User Img">
+								</div>
+								<div class="user-info__basic">
+									<h5 class="mb-0">Kiran Acharya</h5>
+									<p class="text-muted mb-0">파리바게트 성수점 방문</p>
+								</div>
+							</div>
+							<div class="dropdown open">
+								<a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-ellipsis-v"></i>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="triggerId1">
+									<a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+									<a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+								</div>
+							</div>
+						</div>
+						<span class="mb-0 text-view-sec">매장은 청결했지만, 음식이 늦게 나왔습니다</span>
+						<a href="#!" class="view-more"><small>더보기</small></a>
+						<div class="d-flex justify-content-between mt-4">
+							<div>
+								<h5 class="mb-0">06:00 PM
+								</h5>
+							</div>
+							<span class="text-success font-weight-bold">답글달기</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-4">
+					<div class="card bg-white p-3 mb-4 shadow">
+						<div class="d-flex justify-content-between mb-4">
+							<div class="user-info">
+								<div class="user-info__img">
+									<img src="img/user2.jpg" alt="User Img">
+								</div>
+								<div class="user-info__basic">
+									<h5 class="mb-0">joe</h5>
+									<p class="text-muted mb-0">파리바게트 뚝섬점 방문</p>
+								</div>
+							</div>
+							<div class="dropdown open">
+								<a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-ellipsis-v"></i>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="triggerId1">
+									<a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+									<a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+								</div>
+							</div>
+						</div>
+						<span class="mb-0 text-view-sec">청결하고 음식도 맛있었습니다.</span>
+						<a href="#!" class="view-more"><small>더보기</small></a>
+						<div class="d-flex justify-content-between mt-4">
+							<div>
+								<h5 class="mb-0">06:30 PM
+								</h5>
+							</div>
+							<span class="text-success font-weight-bold">답글달기</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-4">
+					<div class="card bg-white p-3 mb-4 shadow">
+						<div class="d-flex justify-content-between mb-4">
+							<div class="user-info">
+								<div class="user-info__img">
+									<img src="img/user3.jpg" alt="User Img">
+								</div>
+								<div class="user-info__basic">
+									<h5 class="mb-0">John Doe</h5>
+									<p class="text-muted mb-0">파리바게트 연신내점 방문</p>
+								</div>
+							</div>
+							<div class="dropdown open">
+								<a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-ellipsis-v"></i>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="triggerId1">
+									<a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+									<a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+								</div>
+							</div>
+						</div>
+						<span class="mb-0 text-view-sec">포장해갔는데 빨리 나와서 좋았어요</span>
+						<a href="#!" class="view-more"><small>더보기</small></a>
+						<div class="d-flex justify-content-between mt-4">
+							<div>
+								<h5 class="mb-0">07:00 PM
+								</h5>
+							</div>
+							<span class="text-success font-weight-bold">답글달기</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-4">
+					<div class="card bg-white p-3 mb-4 shadow">
+						<div class="d-flex justify-content-between mb-4">
+							<div class="user-info">
+								<div class="user-info__img">
+									<img src="img/user7.jpg" alt="User Img">
+								</div>
+								<div class="user-info__basic">
+									<h5 class="mb-0">Vishwanath</h5>
+									<p class="text-muted mb-0">28 yrs, Male</p>
+								</div>
+							</div>
+							<div class="dropdown open">
+								<a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-ellipsis-v"></i>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="triggerId1">
+									<a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+									<a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+								</div>
+							</div>
+						</div>
+						<h6 class="mb-0">+91 9876543215</h6>
+						<a href="#!"><small>Contact</small></a>
+						<div class="d-flex justify-content-between mt-4">
+							<div>
+								<h5 class="mb-0">07:15 PM
+									<small class="ml-1">2 Feb 2021</small>
+								</h5>
+							</div>
+							<span class="text-success font-weight-bold">Consult</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-4">
+					<div class="card bg-white p-3 mb-4 shadow">
+						<div class="d-flex justify-content-between mb-4">
+							<div class="user-info">
+								<div class="user-info__img">
+									<img src="img/user1.jpg" alt="User Img">
+								</div>
+								<div class="user-info__basic">
+									<h5 class="mb-0">Kiran Acharya</h5>
+									<p class="text-muted mb-0">28 yrs, Male</p>
+								</div>
+							</div>
+							<div class="dropdown open">
+								<a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-ellipsis-v"></i>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="triggerId1" style="">
+									<a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+									<a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+								</div>
+							</div>
+						</div>
+						<h6 class="mb-0">+91 9876543215</h6>
+						<a href="#!"><small>Contact</small></a>
+						<div class="d-flex justify-content-between mt-4">
+							<div>
+								<h5 class="mb-0">06:30 PM
+									<small class="ml-1">3 Feb 2021</small>
+								</h5>
+							</div>
+							<span class="text-primary font-weight-bold">Revisit</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-4">
+					<div class="card bg-white p-3 mb-4 shadow">
+						<div class="d-flex justify-content-between mb-4">
+							<div class="user-info">
+								<div class="user-info__img">
+									<img src="img/user2.jpg" alt="User Img">
+								</div>
+								<div class="user-info__basic">
+									<h5 class="mb-0">Sandeep Hegde</h5>
+									<p class="text-muted mb-0">28 yrs, Male</p>
+								</div>
+							</div>
+							<div class="dropdown open">
+								<a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-ellipsis-v"></i>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="triggerId1">
+									<a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+									<a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+								</div>
+							</div>
+						</div>
+						<h6 class="mb-0">+91 9876543215</h6>
+						<a href="#!"><small>Contact</small></a>
+						<div class="d-flex justify-content-between mt-4">
+							<div>
+								<h5 class="mb-0">07:00 PM
+									<small class="ml-1">3 Feb 2021</small>
+								</h5>
+							</div>
+							<span class="text-primary font-weight-bold">Revisit</span>
+						</div>
+					</div>
+				</div>
+			</div>
         </div>
              
       </section>
@@ -495,9 +653,8 @@
               </div>
         </div>
     </div>
-
-      <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 
   <script>
@@ -545,267 +702,6 @@ function map(n, a, b, _a, _b) {
   return _a + n * u;
 }
 
-/* chart.js chart examples */
-
-// chart colors
-var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d'];
-
-/* large line chart */
-var chLine = document.getElementById("chLine");
-var chartData = {
-  labels: ["S", "M", "T", "W", "T", "F", "S"],
-  datasets: [{
-    data: [589, 445, 483, 503, 689, 692, 634],
-    backgroundColor: 'transparent',
-    borderColor: colors[0],
-    borderWidth: 4,
-    pointBackgroundColor: colors[0]
-  }
-//   {
-//     data: [639, 465, 493, 478, 589, 632, 674],
-//     backgroundColor: colors[3],
-//     borderColor: colors[1],
-//     borderWidth: 4,
-//     pointBackgroundColor: colors[1]
-//   }
-  ]
-};
-if (chLine) {
-  new Chart(chLine, {
-  type: 'line',
-  data: chartData,
-  options: {
-    scales: {
-      xAxes: [{
-        ticks: {
-          beginAtZero: false
-        }
-      }]
-    },
-    legend: {
-      display: false
-    },
-    responsive: true
-  }
-  });
-}
-
-/* large pie/donut chart */
-var chPie = document.getElementById("chPie");
-if (chPie) {
-  new Chart(chPie, {
-    type: 'pie',
-    data: {
-      labels: ['Desktop', 'Phone', 'Tablet', 'Unknown'],
-      datasets: [
-        {
-          backgroundColor: [colors[1],colors[0],colors[2],colors[5]],
-          borderWidth: 0,
-          data: [50, 40, 15, 5]
-        }
-      ]
-    },
-    plugins: [{
-      beforeDraw: function(chart) {
-        var width = chart.chart.width,
-            height = chart.chart.height,
-            ctx = chart.chart.ctx;
-        ctx.restore();
-        var fontSize = (height / 70).toFixed(2);
-        ctx.font = fontSize + "em sans-serif";
-        ctx.textBaseline = "middle";
-        var text = chart.config.data.datasets[0].data[0] + "%",
-            textX = Math.round((width - ctx.measureText(text).width) / 2),
-            textY = height / 2;
-        ctx.fillText(text, textX, textY);
-        ctx.save();
-      }
-    }],
-    options: {layout:{padding:0}, legend:{display:false}, cutoutPercentage: 80}
-  });
-}
-
-/* bar chart */
-var chBar = document.getElementById("chBar");
-if (chBar) {
-  new Chart(chBar, {
-  type: 'bar',
-  data: {
-    labels: ["S", "M", "T", "W", "T", "F", "S"],
-    datasets: [{
-      data: [589, 445, 483, 503, 689, 692, 634],
-      backgroundColor: colors[0]
-    },
-    {
-      data: [639, 465, 493, 478, 589, 632, 674],
-      backgroundColor: colors[1]
-    }]
-  },
-  options: {
-    legend: {
-      display: false
-    },
-    scales: {
-      xAxes: [{
-        barPercentage: 0.4,
-        categoryPercentage: 0.5
-      }]
-    }
-  }
-  });
-}
-
-/* 3 donut charts */
-var donutOptions = {
-  cutoutPercentage: 85, 
-  legend: {position:'bottom', padding:5, labels: {pointStyle:'circle', usePointStyle:true}}
-};
-
-// donut 1
-var chDonutData1 = {
-    labels: ['Bootstrap', 'Popper', 'Other'],
-    datasets: [
-      {
-        backgroundColor: colors.slice(0,3),
-        borderWidth: 0,
-        data: [74, 11, 40]
-      }
-    ]
-};
-
-var chDonut1 = document.getElementById("chDonut1");
-if (chDonut1) {
-  new Chart(chDonut1, {
-      type: 'pie',
-      data: chDonutData1,
-      options: donutOptions
-  });
-}
-
-// donut 2
-var chDonutData2 = {
-    labels: ['Wips', 'Pops', 'Dags'],
-    datasets: [
-      {
-        backgroundColor: colors.slice(0,3),
-        borderWidth: 0,
-        data: [40, 45, 30]
-      }
-    ]
-};
-var chDonut2 = document.getElementById("chDonut2");
-if (chDonut2) {
-  new Chart(chDonut2, {
-      type: 'pie',
-      data: chDonutData2,
-      options: donutOptions
-  });
-}
-
-// donut 3
-var chDonutData3 = {
-    labels: ['Angular', 'React', 'Other'],
-    datasets: [
-      {
-        backgroundColor: colors.slice(0,3),
-        borderWidth: 0,
-        data: [21, 45, 55, 33]
-      }
-    ]
-};
-var chDonut3 = document.getElementById("chDonut3");
-if (chDonut3) {
-  new Chart(chDonut3, {
-      type: 'pie',
-      data: chDonutData3,
-      options: donutOptions
-  });
-}
-
-/* 3 line charts */
-var lineOptions = {
-    legend:{display:false},
-    tooltips:{interest:false,bodyFontSize:11,titleFontSize:11},
-    scales:{
-        xAxes:[
-            {
-                ticks:{
-                    display:false
-                },
-                gridLines: {
-                    display:false,
-                    drawBorder:false
-                }
-            }
-        ],
-        yAxes:[{display:false}]
-    },
-    layout: {
-        padding: {
-            left: 6,
-            right: 6,
-            top: 4,
-            bottom: 6
-        }
-    }
-};
-
-var chLine1 = document.getElementById("chLine1");
-if (chLine1) {
-  new Chart(chLine1, {
-      type: 'line',
-      data: {
-          labels: ['Jan','Feb','Mar','Apr','May'],
-          datasets: [
-            {
-              backgroundColor:'#ffffff',
-              borderColor:'#ffffff',
-              data: [10, 11, 4, 11, 4],
-              fill: false
-            }
-          ]
-      },
-      options: lineOptions
-  });
-}
-var chLine2 = document.getElementById("chLine2");
-if (chLine2) {
-  new Chart(chLine2, {
-      type: 'line',
-      data: {
-          labels: ['A','B','C','D','E'],
-          datasets: [
-            {
-              backgroundColor:'#ffffff',
-              borderColor:'#ffffff',
-              data: [4, 5, 7, 13, 12],
-              fill: false
-            }
-          ]
-      },
-      options: lineOptions
-  });
-}
-
-var chLine3 = document.getElementById("chLine3");
-if (chLine3) {
-  new Chart(chLine3, {
-      type: 'line',
-      data: {
-          labels: ['Pos','Neg','Nue','Other','Unknown'],
-          datasets: [
-            {
-              backgroundColor:'#ffffff',
-              borderColor:'#ffffff',
-              data: [13, 15, 10, 9, 14],
-              fill: false
-            }
-          ]
-      },
-      options: lineOptions
-  });
-}
-
 // 모달창 열기
 function modalOpen() {
     const modal = document.querySelector(".modal");
@@ -819,11 +715,14 @@ function modalClose() {
 
     modal.style.display = "none";
 }
-// swiper slide
-var swiper = new Swiper(".mySwiper", {
-          pagination: {
-            el: ".swiper-pagination",
-          },
-        });
+
+// 오늘의 리뷰 - 더보기 클릭시 리뷰 전체 내용 보여지도록
+const btnMore = document.getElementsByClassName(".view-more")[0];
+
+btnMore.addEventListener("click", feedContentMore);
+
+function feedContentMore() {
+  feedMore.classList.add("more");
+}
   </script>
 </html>
