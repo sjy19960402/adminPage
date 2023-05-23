@@ -34,6 +34,10 @@ ol {
   background-color: #f9e6ec;
   color: #ff548a;
 }
+.bedge-vi {
+  background-color: #f6f5ff;
+  color: #a37cf9;
+}
 /* 버튼 */
 .line {
   border: 1px solid #5e56ca;
@@ -49,6 +53,7 @@ header .nav-01 {
   background-color: #222;
   border-bottom: 2px solid #f6f6f6;
   color: #fff;
+  width: 100%;
   height: 60px;
   line-height: 60px;
   font-size: 1.2rem;
@@ -100,31 +105,26 @@ header .nav-02 {
   color: #fff;
   padding: 25px;
 }
-header .nav-02 h4 {
-  color: #1a7cff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  /* border-bottom: 2px solid #1a7cff; */
-}
-header .nav-02 h4:last-of-type {
+.nav-02 .b-tab {
   margin-top: 30px;
 }
-.nav-02 ul li {
-  padding: 5px 0 0 8px;
-  border-radius: 10px;
-  transition: 0.2s;
+.b-tab li {
+  margin-bottom: 20px;
 }
-.nav-02 ul li p {
+.b-tab li .tab-btn {
   display: inline-block;
-  text-indent: 10px;
-  padding-top: 3px;
-  padding-bottom: 0 !important;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 50px;
+  transition: 0.3s;
+  color: #fff;
 }
-.nav-02 ul li:hover {
+/* 탭메뉴 넘어갈때 효과 */
+.is_on {
   background-color: #fff;
-  color: #000;
+}
+._on {
+  color: #3182f6 !important;
 }
 
 /* 세로 nav- 로그인 페이지 연결 */
@@ -136,7 +136,7 @@ header .nav-02 h4:last-of-type {
 }
 .nav-login-box a {
   display: inline-block;
-  margin-left: 30%;
+  margin-left: 32%;
   line-height: 35px;
   color: #fff !important;
   font-weight: 600;
@@ -163,8 +163,8 @@ main .cont h2 {
   color: #000;
   margin-bottom: 20px;
 }
-/* - 아이콘 탭 박스 */
-main .cont01 .tab-box {
+/* cont02- 아이콘 탭 박스 */
+main .tab-box {
   width: 100%;
   height: 100px;
   border-radius: 10px;
@@ -175,7 +175,7 @@ main .cont01 .tab-box {
   font-size: 0.8rem;
   font-weight: 500;
 }
-.cont01 .tab-box ul {
+.tab-box ul {
   display: flex;
   width: 90%;
   margin: 0 auto;
@@ -186,32 +186,45 @@ main .cont01 .tab-box {
 .tab-box ul li img {
   width: 50px;
 }
-/* cont01- 메인콘텐츠 */
-main .cont01 .main-cont {
+/* cont02- 메인콘텐츠 */
+.main-cont {
   position: relative;
   background-color: #edf7fe;
   width: 100%;
   height: 300px;
   margin-bottom: 15px;
 }
-/* cont01- 메인콘텐츠 - 버튼 영역*/
-.cont01 .main-cont .btn {
+/* cont02- 메인콘텐츠 - 버튼 영역*/
+.main-cont .btn {
   position: absolute;
   bottom: 20px;
   right: 10px;
   margin-right: 50px;
 }
-.cont01 .main-cont .btn a {
+.main-cont .btn a {
   text-decoration: none;
   padding: 6px 32px;
   border-radius: 10px;
   font-size: 0.8rem;
 }
-/* cont01- 서브콘텐츠 */
-.cont01 .sub-cont {
-  width: 49%;
-  height: 200px;
+/* 매장관리 - 제목 */
+.sub-cont h4 {
+  font-size: 1rem;
 }
+/* 대시보드 주문현황 통계정리 */
+.order-info {
+  display: flex;
+  width: 100%;
+}
+.order-info li {
+  width: 40%;
+  text-align: center;
+  transform: translateY(14px);
+}
+.order-info li:not(:last-child) {
+  border-right: 1px solid #eeeeee;
+}
+/* 서브콘텐츠 */
 .left {
   float: left;
 }
@@ -219,8 +232,6 @@ main .cont01 .main-cont {
   float: right;
   display: flex;
 }
-
-/* cont02- 메인콘텐츠 */
 
 /* 검색창 */
 .search_inner {
@@ -614,43 +625,6 @@ aside .hide-box {
 aside:hover {
   width: 200px;
 }
-/* 하단 nav - cont랑 연결 */
-footer .b-tab {
-  position: fixed;
-  display: flex;
-  bottom: 0;
-  left: 28%;
-  width: 400px;
-  height: 50px;
-  background-color: #000;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  font-size: 1.1rem;
-  line-height: 50px;
-  font-weight: 600;
-  transform: translateY(16px);
-}
-
-footer .b-tab li {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.b-tab li .tab-btn {
-  text-decoration: none;
-  padding: 5px 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-  color: #fff;
-}
-/* 탭메뉴 넘어갈때 효과 */
-.is_on {
-  background-color: #fff;
-}
-._on {
-  color: #3182f6 !important;
-}
 
 /* % 그래프 레이아웃 스타일 */
 .main-cont .context {
@@ -892,4 +866,44 @@ footer .b-tab li {
   left: 72%;
   font-size: 2rem;
   cursor: pointer;
+}
+/* 메뉴관리 */
+.menu-all-num {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 2px 2px 4px #ccc;
+  border-radius: 10px;
+  line-height: 10px;
+}
+.menu-all-num p {
+  transform: translateY(6px);
+}
+/* 메뉴관리 수정 - 모달 */
+.list-modi {
+  margin-left: 10px;
+  border: none;
+  background: none;
+  color: #007bff;
+}
+.list-modi:focus {
+  outline: none;
+}
+.red {
+  color: #ff0000;
+}
+.modi-tab a {
+  display: inline-block;
+  border-radius: 50px;
+  width: 20%;
+  text-align: center;
+  margin-top: 5px;
+  padding: 2px;
+  border: 1px solid #0c77d7;
+  font-size: 0.8rem;
+}
+.modi-on {
+  background-color: #0c77d7;
+  color: #fff;
 }
